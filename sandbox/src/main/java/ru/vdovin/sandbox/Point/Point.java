@@ -2,15 +2,17 @@ package ru.vdovin.sandbox.Point;
 
 public class Point {
 
-    public double x;
-    public double y;
+    double x;
+    double y;
 
-    public Point(double xx, double y) {
-        x = xx;
+    public Point(double x, double y) {
+        this.x = x;
         this.y = y;
     }
-    public double whatLenghtTo(Point p) {
-        double len = Math.sqrt(Math.pow((this.x - p.x), 2) + Math.pow((this.y - p.y), 2));
-        return len;
+
+    public double sayDistanceto(Point p) {
+        double dis = Math.sqrt(Math.pow(this.x - p.x, 2) + Math.pow(this.y - p.y, 2));
+        return dis;
+
     }
 }
