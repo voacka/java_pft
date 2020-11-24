@@ -1,10 +1,12 @@
 ru/vdovin/sandbox/helloWorld/MyFirstProgram.java
  ru.vdovin.sandbox.helloWorld.MyFirstProgram
+ru/vdovin/sandbox/Point/Distance.java
+ ru.vdovin.sandbox.Point.Distance
 ru/vdovin/sandbox/helloWorld/Rectangle.java
  ru.vdovin.sandbox.helloWorld.Rectangle
 ru/vdovin/sandbox/helloWorld/Square.java
  ru.vdovin.sandbox.helloWorld.Square
-ru/vdovin/sandbox/Point/Distance.java
- ru.vdovin.sandbox.Point.Distance
 ru/vdovin/sandbox/Point/Point.java
  ru.vdovin.sandbox.Point.Point
+ru/vdovin/sandbox/kotiki/Cat.java
+ ru.vdovin.sandbox.kotiki.Cat
