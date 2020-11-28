@@ -1,4 +1,4 @@
-package ru.vdovin.sandbox.helloWorld;
+package ru.vdovin.sandbox.helloWorld.helloWorld;
 
 public class Square {
 
@@ -7,7 +7,7 @@ public class Square {
     public Square(double l){
         this.l = l;
     }
-    public  double area() {
+    public double area() {
         return this.l * this.l;
     }
 

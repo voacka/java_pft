@@ -1,4 +1,4 @@
-package ru.vdovin.sandbox.Point;
+package ru.vdovin.sandbox.helloWorld.Point;
 
 public class Point {
 

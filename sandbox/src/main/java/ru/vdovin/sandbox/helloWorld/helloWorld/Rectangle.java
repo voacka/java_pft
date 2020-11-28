@@ -1,4 +1,4 @@
-package ru.vdovin.sandbox.helloWorld;
+package ru.vdovin.sandbox.helloWorld.helloWorld;
 
 public class Rectangle {
 

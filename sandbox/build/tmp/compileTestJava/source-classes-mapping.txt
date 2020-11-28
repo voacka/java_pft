@@ -1,0 +1,2 @@
+ru/vdovin/sandbox/helloWorld/SquareTests.java
+ ru.vdovin.sandbox.helloWorld.SquareTests
