@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.vdovin.sandbox.helloWorld.SquareTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-28T14:03:03" hostname="DESKTOP-HADC1H7" time="0.007">
-  <properties/>
-  <testcase name="testArea" classname="ru.vdovin.sandbox.helloWorld.SquareTests" time="0.007"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -1,2 +1,4 @@
-ru/vdovin/sandbox/helloWorld/SquareTests.java
- ru.vdovin.sandbox.helloWorld.SquareTests
+ru/vdovin/sandbox/PointTests/PointTests.java
+ ru.vdovin.sandbox.PointTests.PointTests
+ru/vdovin/sandbox/SquareTests/SquareTests.java
+ ru.vdovin.sandbox.SquareTests.SquareTests

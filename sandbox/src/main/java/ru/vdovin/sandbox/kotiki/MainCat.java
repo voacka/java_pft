@@ -1,4 +1,4 @@
-package ru.vdovin.sandbox.helloWorld.kotiki;
+package ru.vdovin.sandbox.kotiki;
 
 public class MainCat {
 

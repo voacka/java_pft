@@ -1,9 +1,9 @@
-package ru.vdovin.sandbox.helloWorld.Point;
+package ru.vdovin.sandbox.Point;
 
 public class Point {
 
-    double x;
-    double y;
+    public double x;
+    public double y;
 
     public Point(double x, double y) {
         this.x = x;

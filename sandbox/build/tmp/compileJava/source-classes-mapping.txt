@@ -1,14 +1,14 @@
-ru/vdovin/sandbox/helloWorld/Point/Point.java
- ru.vdovin.sandbox.helloWorld.Point.Point
-ru/vdovin/sandbox/helloWorld/kotiki/MainCat.java
- ru.vdovin.sandbox.helloWorld.kotiki.MainCat
-ru/vdovin/sandbox/helloWorld/helloWorld/Rectangle.java
- ru.vdovin.sandbox.helloWorld.helloWorld.Rectangle
-ru/vdovin/sandbox/helloWorld/Point/Distance.java
- ru.vdovin.sandbox.helloWorld.Point.Distance
-ru/vdovin/sandbox/helloWorld/kotiki/Cat.java
- ru.vdovin.sandbox.helloWorld.kotiki.Cat
-ru/vdovin/sandbox/helloWorld/helloWorld/MyFirstProgram.java
- ru.vdovin.sandbox.helloWorld.helloWorld.MyFirstProgram
-ru/vdovin/sandbox/helloWorld/helloWorld/Square.java
- ru.vdovin.sandbox.helloWorld.helloWorld.Square
+ru/vdovin/sandbox/kotiki/MainCat.java
+ ru.vdovin.sandbox.kotiki.MainCat
+ru/vdovin/sandbox/kotiki/Cat.java
+ ru.vdovin.sandbox.kotiki.Cat
+ru/vdovin/sandbox/Point/Distance.java
+ ru.vdovin.sandbox.Point.Distance
+ru/vdovin/sandbox/helloWorld/Rectangle.java
+ ru.vdovin.sandbox.helloWorld.Rectangle
+ru/vdovin/sandbox/helloWorld/Square.java
+ ru.vdovin.sandbox.helloWorld.Square
+ru/vdovin/sandbox/Point/Point.java
+ ru.vdovin.sandbox.Point.Point
+ru/vdovin/sandbox/helloWorld/MyFirstProgram.java
+ ru.vdovin.sandbox.helloWorld.MyFirstProgram

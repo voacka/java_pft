@@ -1,4 +1,4 @@
-package ru.vdovin.sandbox.helloWorld.helloWorld;
+package ru.vdovin.sandbox.helloWorld;
 
 public class MyFirstProgram {
 

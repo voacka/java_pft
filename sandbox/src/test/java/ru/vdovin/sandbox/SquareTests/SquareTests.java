@@ -1,8 +1,8 @@
-package ru.vdovin.sandbox.helloWorld;
+package ru.vdovin.sandbox.SquareTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.vdovin.sandbox.helloWorld.helloWorld.Square;
+import ru.vdovin.sandbox.helloWorld.Square;
 
 
 public class SquareTests {
