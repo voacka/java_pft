@@ -47,12 +47,12 @@ public class GroupCreationTests {
 
     }
 
-    private void returnToGroupPage() {
-        driver.findElement(By.linkText("group page")).click();
-    }
-
     private void submitGroupCreation() {
         driver.findElement(By.name("submit")).click();
+    }
+
+    private void returnToGroupPage() {
+        driver.findElement(By.linkText("group page")).click();
     }
 
     private void fillGroupForm(GroupData groupData) {
