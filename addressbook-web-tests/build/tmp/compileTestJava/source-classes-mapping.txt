@@ -1,2 +1,4 @@
 ru/vdovin/pft/addressbook/GroupCreationTests.java
  ru.vdovin.pft.addressbook.GroupCreationTests
+ru/vdovin/pft/addressbook/GroupData.java
+ ru.vdovin.pft.addressbook.GroupData
