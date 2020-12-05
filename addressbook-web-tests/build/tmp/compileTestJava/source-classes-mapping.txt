@@ -1,2 +1,2 @@
-ru/vdovin/pft/addressbook/GroupCreationTest.java
- ru.vdovin.pft.addressbook.GroupCreationTest
+ru/vdovin/pft/addressbook/GroupCreationTests.java
+ ru.vdovin.pft.addressbook.GroupCreationTests
