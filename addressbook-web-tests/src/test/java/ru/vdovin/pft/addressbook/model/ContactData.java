@@ -1,4 +1,4 @@
-package ru.vdovin.pft.addressbook;
+package ru.vdovin.pft.addressbook.model;
 
 public class ContactData {
     private final String firstname;

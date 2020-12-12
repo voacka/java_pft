@@ -1,4 +1,4 @@
-package ru.vdovin.pft.addressbook;
+package ru.vdovin.pft.addressbook.model;
 
 public class GroupData {
     private final String name;

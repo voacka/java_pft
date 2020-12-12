@@ -1,25 +1,21 @@
-package ru.vdovin.pft.addressbook;
+package ru.vdovin.pft.addressbook.appmanager;
 
-import org.junit.After;
-import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import ru.vdovin.pft.addressbook.model.GroupData;
 
 import java.util.Map;
 
-public class TestBase {
-
+public class ApplicationManager {
 
     JavascriptExecutor js;
     private WebDriver driver;
     private Map<String, Object> vars;
 
-
-    @Before
-    public void setUp() {
+    public void init() {
         driver = new ChromeDriver();
         js = (JavascriptExecutor) driver;
         driver.get("http://localhost/addressbook/");
@@ -34,20 +30,19 @@ public class TestBase {
         driver.findElement(By.cssSelector("input:nth-child(7)")).click();
     }
 
-    @After
-    public void tearDown() {
+    public void stop() {
         driver.quit();
     }
 
-    protected void submitGroupCreation() {
+    public void submitGroupCreation() {
         driver.findElement(By.name("submit")).click();
     }
 
-    protected void returnToGroupPage() {
+    public void returnToGroupPage() {
         driver.findElement(By.linkText("group page")).click();
     }
 
-    protected void fillGroupForm(GroupData groupData) {
+    public void fillGroupForm(GroupData groupData) {
         driver.findElement(By.name("group_name")).click();
         driver.findElement(By.name("group_name")).sendKeys(groupData.getName());
         driver.findElement(By.name("group_header")).click();
@@ -56,19 +51,19 @@ public class TestBase {
         driver.findElement(By.name("group_footer")).sendKeys(groupData.getFooter());
     }
 
-    protected void initGroupCreation() {
+    public void initGroupCreation() {
         driver.findElement(By.name("new")).click();
     }
 
-    protected void gotoGroupPage() {
+    public void gotoGroupPage() {
         driver.findElement(By.linkText("groups")).click();
     }
 
-    protected void deleteSelectedGroups() {
+    public void deleteSelectedGroups() {
       driver.findElement(By.cssSelector("input:nth-child(9)")).click();
     }
 
-    protected void selectGroup() {
+    public void selectGroup() {
       driver.findElement(By.cssSelector(".group:nth-child(6) > input")).click();
     }
 }
