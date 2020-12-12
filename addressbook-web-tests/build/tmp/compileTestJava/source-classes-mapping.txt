@@ -2,5 +2,11 @@ ru/vdovin/pft/addressbook/GroupData.java
  ru.vdovin.pft.addressbook.GroupData
 ru/vdovin/pft/addressbook/GroupCreationTests.java
  ru.vdovin.pft.addressbook.GroupCreationTests
+ru/vdovin/pft/addressbook/GroupDeleteTest.java
+ ru.vdovin.pft.addressbook.GroupDeleteTest
+ru/vdovin/pft/addressbook/ContactData.java
+ ru.vdovin.pft.addressbook.ContactData
 ru/vdovin/pft/addressbook/ContactCreationTests.java
  ru.vdovin.pft.addressbook.ContactCreationTests
+ru/vdovin/pft/addressbook/TestBase.java
+ ru.vdovin.pft.addressbook.TestBase
