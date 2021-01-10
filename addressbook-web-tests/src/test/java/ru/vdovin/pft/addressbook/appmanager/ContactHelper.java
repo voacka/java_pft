@@ -2,7 +2,6 @@ package ru.vdovin.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import ru.vdovin.pft.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase {
@@ -11,7 +10,7 @@ public class ContactHelper extends HelperBase {
         super(driver);
     }
     public void initContactCreation() {
-        driver.findElement(By.linkText("add new")).click();
+        click(By.linkText("add new"));
     }
 
     public void fillContactForm(ContactData contactData) {
@@ -27,22 +26,19 @@ public class ContactHelper extends HelperBase {
         type(By.name("email2"), contactData.getEmail2());
         type(By.name("email3"), contactData.getEmail3());
         type(By.name("homepage"), contactData.getHomepage());
-
-        driver.findElement(By.name("bday")).click();
+        click(By.name("bday"));
         {
-            WebElement dropdown = driver.findElement(By.name("bday"));
-            dropdown.findElement(By.xpath("//option[. = '1']")).click();
+            click(By.xpath("//option[. = '1']"));
         }
+        click(By.name("bmonth"));
         {
-            WebElement dropdown = driver.findElement(By.name("bmonth"));
-            dropdown.findElement(By.xpath("//option[. = 'January']")).click();
+            click(By.xpath("//option[. = 'January']"));
         }
-        driver.findElement(By.name("byear")).sendKeys("1991");
+        type(By.name("byear"), "2000");
         {
-            WebElement dropdown = driver.findElement(By.name("new_group"));
-            dropdown.findElement(By.xpath("//option[. = '1']")).click();
+            click(By.xpath("//option[. = 'test1']"));
         }
-        driver.findElement(By.cssSelector("input:nth-child(87)")).click();
+        click(By.cssSelector("input:nth-child(87)"));
     }
 
     public void returnToHomePage() {
