@@ -11,12 +11,11 @@ public class ApplicationManager {
     WebDriver driver;
 
     private SessionHelper sessionHelper;
-    private NagigationHelper nagigationHelper;
+    private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
     private ContactHelper contactHelper;
     JavascriptExecutor js;
     private Map<String, Object> vars;
-
 
     public void init() {
         driver = new ChromeDriver();
@@ -25,10 +24,9 @@ public class ApplicationManager {
         contactHelper = new ContactHelper(driver);
         groupHelper = new GroupHelper(driver);
         sessionHelper = new SessionHelper(driver);
-        nagigationHelper = new NagigationHelper(driver);
+        navigationHelper = new NavigationHelper(driver);
         sessionHelper.login("admin", "secret");
     }
-
 
     public void stop() {
         driver.quit();
@@ -38,7 +36,14 @@ public class ApplicationManager {
         return groupHelper;
     }
 
-    public NagigationHelper getNagigationHelper() {
-        return nagigationHelper;
+    public NavigationHelper getNavigationHelper() {
+        return navigationHelper;
     }
+    public ContactHelper getContactHelper () {
+        return contactHelper;
+
+    }
+
+
+
 }
