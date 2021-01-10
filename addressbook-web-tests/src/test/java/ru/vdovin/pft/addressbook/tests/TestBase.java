@@ -6,7 +6,6 @@ import ru.vdovin.pft.addressbook.appmanager.ApplicationManager;
 
 public class TestBase {
 
-
     protected final ApplicationManager app = new ApplicationManager();
 
     @Before

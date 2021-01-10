@@ -10,7 +10,7 @@ import ru.vdovin.pft.addressbook.model.ContactData;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ContactCreationTests {
+public class ContactCreationTests extends TestBase {
     private WebDriver driver;
     private Map<String, Object> vars;
     JavascriptExecutor js;

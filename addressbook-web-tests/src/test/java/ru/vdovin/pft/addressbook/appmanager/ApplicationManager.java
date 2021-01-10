@@ -13,6 +13,7 @@ public class ApplicationManager {
     private SessionHelper sessionHelper;
     private NagigationHelper nagigationHelper;
     private GroupHelper groupHelper;
+    private ContactHelper contactHelper;
     JavascriptExecutor js;
     private Map<String, Object> vars;
 
@@ -21,6 +22,7 @@ public class ApplicationManager {
         driver = new ChromeDriver();
         js = (JavascriptExecutor) driver;
         driver.get("http://localhost/addressbook/");
+        contactHelper = new ContactHelper(driver);
         groupHelper = new GroupHelper(driver);
         sessionHelper = new SessionHelper(driver);
         nagigationHelper = new NagigationHelper(driver);
