@@ -4,11 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ru.vdovin.pft.addressbook.model.ContactData;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 public class ContactHelper extends HelperBase {
 
     public ContactHelper(WebDriver driver) {
         super(driver);
     }
+
     public void initContactCreation() {
         click(By.linkText("add new"));
     }
@@ -42,8 +46,22 @@ public class ContactHelper extends HelperBase {
         click(By.cssSelector("input:nth-child(87)"));
     }
 
-    public void returnToHomePage() {
-        click(By.linkText("home page"));
+    public void gotoHomePage() {
+        click(By.linkText("home"));
     }
+
+    public void confirmDeletion() {
+        assertThat(driver.switchTo().alert().getText(), is("Delete 1 addresses?"));
+        driver.switchTo().alert().accept();
+    }
+
+    public void deleteSelectedContact() {
+        click(By.cssSelector(".left:nth-child(8) > input"));
+    }
+
+    public void selectContact() {
+        click(By.name("selected[]"));
+    }
+
 
 }
