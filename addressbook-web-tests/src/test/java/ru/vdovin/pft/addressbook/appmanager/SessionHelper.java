@@ -11,8 +11,8 @@ public class SessionHelper extends HelperBase {
     }
     public void login(String username, String password) {
         driver.manage().window().setSize(new Dimension(1936, 1056));
-        type(By.name("user"), username);
-        type(By.name("pass"), password);
+        clearAndType(By.name("user"), username);
+        clearAndType(By.name("pass"), password);
         click(By.cssSelector("input:nth-child(7)"));
     }
 

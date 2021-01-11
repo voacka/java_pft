@@ -19,9 +19,9 @@ public class GroupHelper extends HelperBase {
     }
 
     public void fillGroupForm(GroupData groupData) {
-        type(By.name("group_name"), groupData.getName());
-        type(By.name("group_header"), groupData.getHeader());
-        type(By.name("group_footer"), groupData.getFooter());
+        clearAndType(By.name("group_name"), groupData.getName());
+        clearAndType(By.name("group_header"), groupData.getHeader());
+        clearAndType(By.name("group_footer"), groupData.getFooter());
     }
 
     public void initGroupCreation() {

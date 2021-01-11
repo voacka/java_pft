@@ -9,22 +9,22 @@ public class ContactEditingTest extends TestBase {
     @Test
     public void testContactEdition() {
         app.getNavigationHelper().gotoHomePage();
-        app.getContactHelper().selectContact();
+        app.getContactHelper().selectContact("selected[]");
         app.getContactHelper().editSelectedContact();
-        app.getContactHelper().fillContactFormEdition(new ContactData("Victor",
-                "Vladimirovich",
-                "Vdovin",
-                "Voacka",
-                "LFC",
-                "Moscow",
-                "Zhuk",
-                "+888888",
-                "+888888",
-                "vdovin91@yandex.ru",
+        app.getContactHelper().fillContactFormEdition(new ContactData("Vasya",
+                "Vasya",
+                "Vasya",
+                "Vasya",
+                "Vasya",
+                "Vasya",
+                "Vasya",
+                "+Vasya",
+                "+Vasya",
+                "Vasya@yandex.ru",
                 "",
                 "",
-                "https://vk.com/"));
+                "https://vk.com/Vasya/"));
         app.getContactHelper().submitContactEditing();
-//        app.getNavigationHelper().gotoHomePage();
+        app.getNavigationHelper().gotoHomePage();
     }
 }

@@ -14,8 +14,13 @@ public class HelperBase {
         driver.findElement(locator).click();
     }
 
-    protected void type(By locator, String text) {
+    protected void clear(By locator) {
+        driver.findElement(locator).clear();
+    }
+
+    protected void clearAndType(By locator, String text) {
         click(locator);
+        clear(locator);
         driver.findElement(locator).sendKeys(text);
     }
 }

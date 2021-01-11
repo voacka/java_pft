@@ -4,9 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ru.vdovin.pft.addressbook.model.ContactData;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
-
 public class ContactHelper extends HelperBase {
 
     public ContactHelper(WebDriver driver) {
@@ -18,19 +15,19 @@ public class ContactHelper extends HelperBase {
     }
 
     public void fillContactForm(ContactData contactData) {
-        type(By.name("firstname"), contactData.getFirstname());
-        type(By.name("middlename"), contactData.getMiddlename());
-        type(By.name("lastname"), contactData.getLastname());
-        type(By.name("nickname"), contactData.getNickname());
-        type(By.name("company"), contactData.getCompany());
-        type(By.name("address"), contactData.getAddress());
-        type(By.name("home"), contactData.getHome());
-        type(By.name("mobile"), contactData.getMobilePhone());
-        type(By.name("work"), contactData.getWorkPhone());
-        type(By.name("email"), contactData.getEmail1());
-        type(By.name("email2"), contactData.getEmail2());
-        type(By.name("email3"), contactData.getEmail3());
-        type(By.name("homepage"), contactData.getHomepage());
+        clearAndType(By.name("firstname"), contactData.getFirstname());
+        clearAndType(By.name("middlename"), contactData.getMiddlename());
+        clearAndType(By.name("lastname"), contactData.getLastname());
+        clearAndType(By.name("nickname"), contactData.getNickname());
+        clearAndType(By.name("company"), contactData.getCompany());
+        clearAndType(By.name("address"), contactData.getAddress());
+        clearAndType(By.name("home"), contactData.getHome());
+        clearAndType(By.name("mobile"), contactData.getMobilePhone());
+        clearAndType(By.name("work"), contactData.getWorkPhone());
+        clearAndType(By.name("email"), contactData.getEmail1());
+        clearAndType(By.name("email2"), contactData.getEmail2());
+        clearAndType(By.name("email3"), contactData.getEmail3());
+        clearAndType(By.name("homepage"), contactData.getHomepage());
         click(By.name("bday"));
         {
             click(By.xpath("//option[. = '1']"));
@@ -39,7 +36,7 @@ public class ContactHelper extends HelperBase {
         {
             click(By.xpath("//option[. = 'January']"));
         }
-        type(By.name("byear"), "2000");
+        clearAndType(By.name("byear"), "2000");
         {
             click(By.xpath("//option[. = '1']"));
         }
@@ -54,8 +51,8 @@ public class ContactHelper extends HelperBase {
         click(By.cssSelector(".left:nth-child(8) > input"));
     }
 
-    public void selectContact() {
-        click(By.name("selected[]"));
+    public void selectContact(String name) {
+        click(By.name(name));
     }
 
     public void editSelectedContact() {
@@ -67,19 +64,19 @@ public class ContactHelper extends HelperBase {
     }
 
     public void fillContactFormEdition(ContactData contactData) {
-        type(By.name("firstname"), contactData.getFirstname());
-        type(By.name("middlename"), contactData.getMiddlename());
-        type(By.name("lastname"), contactData.getLastname());
-        type(By.name("nickname"), contactData.getNickname());
-        type(By.name("company"), contactData.getCompany());
-        type(By.name("address"), contactData.getAddress());
-        type(By.name("home"), contactData.getHome());
-        type(By.name("mobile"), contactData.getMobilePhone());
-        type(By.name("work"), contactData.getWorkPhone());
-        type(By.name("email"), contactData.getEmail1());
-        type(By.name("email2"), contactData.getEmail2());
-        type(By.name("email3"), contactData.getEmail3());
-        type(By.name("homepage"), contactData.getHomepage());
+        clearAndType(By.name("firstname"), contactData.getFirstname());
+        clearAndType(By.name("middlename"), contactData.getMiddlename());
+        clearAndType(By.name("lastname"), contactData.getLastname());
+        clearAndType(By.name("nickname"), contactData.getNickname());
+        clearAndType(By.name("company"), contactData.getCompany());
+        clearAndType(By.name("address"), contactData.getAddress());
+        clearAndType(By.name("home"), contactData.getHome());
+        clearAndType(By.name("mobile"), contactData.getMobilePhone());
+        clearAndType(By.name("work"), contactData.getWorkPhone());
+        clearAndType(By.name("email"), contactData.getEmail1());
+        clearAndType(By.name("email2"), contactData.getEmail2());
+        clearAndType(By.name("email3"), contactData.getEmail3());
+        clearAndType(By.name("homepage"), contactData.getHomepage());
         click(By.name("bday"));
         {
             click(By.xpath("//option[. = '1']"));
@@ -88,7 +85,7 @@ public class ContactHelper extends HelperBase {
         {
             click(By.xpath("//option[. = 'January']"));
         }
-        type(By.name("byear"), "2000");
+        clearAndType(By.name("byear"), "2000");
         {
             click(By.xpath("//option[. = '1']"));
         }
