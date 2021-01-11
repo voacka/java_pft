@@ -35,4 +35,12 @@ public class GroupHelper extends HelperBase {
     public void selectGroup() {
         click(By.cssSelector(".group:nth-child(6) > input"));
     }
+
+    public void editSelectedGroup() {
+        click(By.name("edit"));
+    }
+
+    public void submitGroupEditing() {
+        click(By.name("update"));
+    }
 }
