@@ -3,7 +3,6 @@ package ru.vdovin.pft.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ru.vdovin.pft.addressbook.model.ContactData;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -44,10 +43,6 @@ public class ContactHelper extends HelperBase {
             click(By.xpath("//option[. = 'test1']"));
         }
         click(By.cssSelector("input:nth-child(87)"));
-    }
-
-    public void gotoHomePage() {
-        click(By.linkText("home"));
     }
 
     public void confirmDeletion() {
