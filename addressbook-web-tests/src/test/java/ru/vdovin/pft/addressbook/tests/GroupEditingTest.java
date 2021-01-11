@@ -1,9 +1,7 @@
 package ru.vdovin.pft.addressbook.tests;
 
-
-import org.testng.annotations.Test;
+import org.junit.Test;
 import ru.vdovin.pft.addressbook.model.GroupData;
-
 
 public class GroupEditingTest extends TestBase {
 
