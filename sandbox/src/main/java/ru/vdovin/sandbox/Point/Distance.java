@@ -10,11 +10,9 @@ public class Distance {
 
     }
 
-    public static double Distance(Point p1, Point p2){
+    public static double Distance(Point p1, Point p2) {
         double dis = Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
         return dis;
 
     }
-
-
- }
+}
