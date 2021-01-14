@@ -1,3 +1,7 @@
+ru/vdovin/sandbox/helloWorld/MyFirstProgram.java
+ ru.vdovin.sandbox.helloWorld.MyFirstProgram
+ru/vdovin/sandbox/helloWorld/Equation.java
+ ru.vdovin.sandbox.helloWorld.Equation
 ru/vdovin/sandbox/kotiki/MainCat.java
  ru.vdovin.sandbox.kotiki.MainCat
 ru/vdovin/sandbox/kotiki/Cat.java
@@ -8,9 +12,7 @@ ru/vdovin/sandbox/helloWorld/Rectangle.java
  ru.vdovin.sandbox.helloWorld.Rectangle
 ru/vdovin/sandbox/helloWorld/Square.java
  ru.vdovin.sandbox.helloWorld.Square
-ru/vdovin/sandbox/Equation.java
- ru.vdovin.sandbox.Equation
 ru/vdovin/sandbox/Point/Point.java
  ru.vdovin.sandbox.Point.Point
-ru/vdovin/sandbox/helloWorld/MyFirstProgram.java
- ru.vdovin.sandbox.helloWorld.MyFirstProgram
+ru/vdovin/sandbox/helloWorld/Equality.java
+ ru.vdovin.sandbox.helloWorld.Equality
