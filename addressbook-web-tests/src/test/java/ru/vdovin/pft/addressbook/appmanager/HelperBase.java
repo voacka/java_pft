@@ -20,7 +20,9 @@ public class HelperBase {
 
     protected void clearAndType(By locator, String text) {
         click(locator);
-        clear(locator);
-        driver.findElement(locator).sendKeys(text);
+        if (text != null) {
+            clear(locator);
+            driver.findElement(locator).sendKeys(text);
+        }
     }
 }

@@ -29,7 +29,7 @@ public class GroupHelper extends HelperBase {
     }
 
     public void deleteSelectedGroups() {
-        click(By.cssSelector("input:nth-child(9)"));
+        click(By.name("delete"));
     }
 
     public void selectGroup() {
