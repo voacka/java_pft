@@ -21,8 +21,11 @@ public class HelperBase {
     protected void clearAndType(By locator, String text) {
         click(locator);
         if (text != null) {
-            clear(locator);
-            driver.findElement(locator).sendKeys(text);
+            String excistingText = driver.findElement(locator).getAttribute("value");
+            if (! excistingText.equals(text)){
+                clear(locator);
+                driver.findElement(locator).sendKeys(text);
+            }
         }
     }
 }
