@@ -9,7 +9,23 @@ public class ContactEditingTest extends TestBase {
     @Test
     public void testContactEdition() {
         app.getNavigationHelper().gotoHomePage();
-        app.getContactHelper().selectContact("selected[]");
+        if (! app.getContactHelper().isThereAnyContact()) {
+                app.getContactHelper().createContact(new ContactData("test",
+                        "test",
+                        "test",
+                        "test",
+                        "LFC",
+                        "Moscow",
+                        "test",
+                        "+7-926-777-77-77",
+                        "+7-495-777-77-77",
+                        "test@test.ru",
+                        "test@yandex.ru",
+                        "test@gmail.ru",
+                        "https://vk.com/",
+                        null));
+        }
+        app.getNavigationHelper().gotoHomePage();
         app.getContactHelper().editSelectedContact();
         app.getContactHelper().fillContactForm(new ContactData("Vasya",
                 "Vasya",

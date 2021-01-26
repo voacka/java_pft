@@ -2,7 +2,6 @@ package ru.vdovin.pft.addressbook.appmanager;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import ru.vdovin.pft.addressbook.model.ContactData;
@@ -44,7 +43,7 @@ public class ContactHelper extends HelperBase {
             click(By.xpath("//option[. = '1']"));
         }
         if (creation) {
-            new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+            new Select(driver.findElement(By.name("new_group"))).selectByVisibleText("[none]");
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
@@ -72,5 +71,15 @@ public class ContactHelper extends HelperBase {
 
     public void submitContactCreation() {
         click(By.name("submit"));
+    }
+
+    public void createContact(ContactData contact) {
+        initContactCreation();
+        fillContactForm(contact, true);
+        submitContactCreation();
+    }
+
+    public boolean isThereAnyContact() {
+        return isElementPresent(By.name("selected[]"));
     }
 }

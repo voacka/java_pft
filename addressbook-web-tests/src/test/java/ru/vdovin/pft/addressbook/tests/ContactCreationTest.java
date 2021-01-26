@@ -21,7 +21,7 @@ public class ContactCreationTest extends TestBase {
                 "test@yandex.ru",
                 "test@gmail.ru",
                 "https://vk.com/",
-                "test1"), true);
+                null), true);
         app.getContactHelper().submitContactCreation();
         app.getNavigationHelper().gotoHomePage();
     }
