@@ -33,7 +33,7 @@ public class GroupHelper extends HelperBase {
     }
 
     public void selectGroup() {
-        click(By.cssSelector(".group:nth-child(6) > input"));
+        click(By.name("selected[]"));
     }
 
     public void editSelectedGroup() {
@@ -42,5 +42,16 @@ public class GroupHelper extends HelperBase {
 
     public void submitGroupEditing() {
         click(By.name("update"));
+    }
+
+    public void createGroup(GroupData group) {
+        initGroupCreation();
+        fillGroupForm(group);
+        submitGroupCreation();
+        returnToGroupPage();
+    }
+
+    public boolean isThereAnyGroup() {
+        return isElementPresent(By.name("selected[]"));
     }
 }
