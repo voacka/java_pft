@@ -23,7 +23,7 @@ public class ContactEditingTest extends TestBase {
                         "test@yandex.ru",
                         "test@gmail.ru",
                         "https://vk.com/",
-                        null));
+                        null), false);
         }
         app.getNavigationHelper().gotoHomePage();
         app.getContactHelper().editSelectedContact();
