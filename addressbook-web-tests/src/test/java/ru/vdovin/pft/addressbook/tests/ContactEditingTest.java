@@ -11,7 +11,7 @@ public class ContactEditingTest extends TestBase {
         app.getNavigationHelper().gotoHomePage();
         app.getContactHelper().selectContact("selected[]");
         app.getContactHelper().editSelectedContact();
-        app.getContactHelper().fillContactFormEdition(new ContactData("Vasya",
+        app.getContactHelper().fillContactForm(new ContactData("Vasya",
                 "Vasya",
                 "Vasya",
                 "Vasya",
@@ -23,7 +23,8 @@ public class ContactEditingTest extends TestBase {
                 "Vasya@yandex.ru",
                 "",
                 "",
-                "https://vk.com/Vasya/"));
+                "https://vk.com/Vasya/",
+                null), false);
         app.getContactHelper().submitContactEditing();
         app.getNavigationHelper().gotoHomePage();
     }

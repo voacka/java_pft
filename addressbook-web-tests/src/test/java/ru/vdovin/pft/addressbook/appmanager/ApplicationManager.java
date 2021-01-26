@@ -7,7 +7,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
 
+import java.time.Duration;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
@@ -33,6 +35,7 @@ public class ApplicationManager {
         } else if (browser.equals(BrowserType.IE)) {
             driver = new InternetExplorerDriver();
         }
+        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         js = (JavascriptExecutor) driver;
         driver.get("http://localhost/addressbook/");
         contactHelper = new ContactHelper(driver);
