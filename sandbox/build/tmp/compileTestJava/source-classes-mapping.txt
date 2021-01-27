@@ -4,3 +4,5 @@ ru/vdovin/sandbox/SquareTests/SquareTests.java
  ru.vdovin.sandbox.SquareTests.SquareTests
 ru/vdovin/sandbox/EquationTests.java
  ru.vdovin.sandbox.EquationTests
+ru/vdovin/sandbox/PrimeTests.java
+ ru.vdovin.sandbox.PrimeTests

@@ -16,3 +16,5 @@ ru/vdovin/sandbox/Point/Point.java
  ru.vdovin.sandbox.Point.Point
 ru/vdovin/sandbox/helloWorld/Equality.java
  ru.vdovin.sandbox.helloWorld.Equality
+ru/vdovin/sandbox/helloWorld/Primes.java
+ ru.vdovin.sandbox.helloWorld.Primes
