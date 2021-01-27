@@ -1,23 +1,21 @@
-ru/vdovin/pft/addressbook/appmanager/GroupHelper.java
- ru.vdovin.pft.addressbook.appmanager.GroupHelper
-ru/vdovin/pft/addressbook/model/ContactData.java
- ru.vdovin.pft.addressbook.model.ContactData
 ru/vdovin/pft/addressbook/model/GroupData.java
  ru.vdovin.pft.addressbook.model.GroupData
-ru/vdovin/pft/addressbook/appmanager/SessionHelper.java
- ru.vdovin.pft.addressbook.appmanager.SessionHelper
-ru/vdovin/pft/addressbook/appmanager/NavigationHelper.java
- ru.vdovin.pft.addressbook.appmanager.NavigationHelper
 ru/vdovin/pft/addressbook/appmanager/HelperBase.java
  ru.vdovin.pft.addressbook.appmanager.HelperBase
 ru/vdovin/pft/addressbook/appmanager/ContactHelper.java
  ru.vdovin.pft.addressbook.appmanager.ContactHelper
-ru/vdovin/pft/addressbook/tests/GroupDeletionTest.java
- ru.vdovin.pft.addressbook.tests.GroupDeletionTest
+ru/vdovin/pft/addressbook/appmanager/SessionHelper.java
+ ru.vdovin.pft.addressbook.appmanager.SessionHelper
+ru/vdovin/pft/addressbook/model/ContactData.java
+ ru.vdovin.pft.addressbook.model.ContactData
+ru/vdovin/pft/addressbook/appmanager/NavigationHelper.java
+ ru.vdovin.pft.addressbook.appmanager.NavigationHelper
+ru/vdovin/pft/addressbook/appmanager/GroupHelper.java
+ ru.vdovin.pft.addressbook.appmanager.GroupHelper
 ru/vdovin/pft/addressbook/tests/ContactDeletionTest.java
  ru.vdovin.pft.addressbook.tests.ContactDeletionTest
-ru/vdovin/pft/addressbook/tests/GroupEditingTest.java
- ru.vdovin.pft.addressbook.tests.GroupEditingTest
+ru/vdovin/pft/addressbook/tests/ContactEditingTest.java
+ ru.vdovin.pft.addressbook.tests.ContactEditingTest
 ru/vdovin/pft/addressbook/appmanager/ApplicationManager.java
  ru.vdovin.pft.addressbook.appmanager.ApplicationManager
 ru/vdovin/pft/addressbook/tests/ContactCreationTest.java
@@ -26,5 +24,7 @@ ru/vdovin/pft/addressbook/tests/TestBase.java
  ru.vdovin.pft.addressbook.tests.TestBase
 ru/vdovin/pft/addressbook/tests/GroupCreationTest.java
  ru.vdovin.pft.addressbook.tests.GroupCreationTest
-ru/vdovin/pft/addressbook/tests/ContactEditingTest.java
- ru.vdovin.pft.addressbook.tests.ContactEditingTest
+ru/vdovin/pft/addressbook/tests/GroupDeletionTest.java
+ ru.vdovin.pft.addressbook.tests.GroupDeletionTest
+ru/vdovin/pft/addressbook/tests/GroupEditingTest.java
+ ru.vdovin.pft.addressbook.tests.GroupEditingTest
