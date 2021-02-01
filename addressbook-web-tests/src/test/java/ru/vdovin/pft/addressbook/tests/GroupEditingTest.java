@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.testng.Assert;
 import ru.vdovin.pft.addressbook.model.GroupData;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class GroupEditingTest extends TestBase {
         List<GroupData> before = app.getGroupHelper().getGroupList();
         app.getGroupHelper().selectGroup(before.size() - 1);
         app.getGroupHelper().editSelectedGroup();
-        GroupData group = new GroupData(before.get(before.size() - 1).getId(), "test1", null, null);
+        GroupData group = new GroupData(before.get(before.size() - 1).getId(), "123", null, null);
         app.getGroupHelper().fillGroupForm(group);
         app.getGroupHelper().submitGroupEditing();
         app.getGroupHelper().returnToGroupPage();
@@ -27,6 +28,9 @@ public class GroupEditingTest extends TestBase {
 
         before.remove(before.size() - 1);
         before.add(group);
-        Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
+        Comparator<? super GroupData> byId = Comparator.comparingInt(GroupData::getId);
+        before.sort(byId);
+        after.sort(byId);
+        Assert.assertEquals(before, after);
     }
 }

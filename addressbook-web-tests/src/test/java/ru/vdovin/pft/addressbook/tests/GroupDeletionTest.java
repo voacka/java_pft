@@ -15,13 +15,13 @@ public class GroupDeletionTest extends TestBase {
             app.getGroupHelper().createGroup(new GroupData("testnew", null, null));
         }
         List<GroupData> before = app.getGroupHelper().getGroupList();
-        app.getGroupHelper().selectGroup(before.size() - 1);
+        app.getGroupHelper().selectGroup(before.size() - 3);
         app.getGroupHelper().deleteSelectedGroups();
         app.getGroupHelper().returnToGroupPage();
         List<GroupData> after = app.getGroupHelper().getGroupList();
         Assert.assertEquals(after.size(), before.size() - 1);
 
-        before.remove(before.size() - 1);
+        before.remove(before.size() - 3);
         Assert.assertEquals(before, after);
     }
 }

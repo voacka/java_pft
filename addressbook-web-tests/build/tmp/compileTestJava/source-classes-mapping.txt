@@ -8,8 +8,8 @@ ru/vdovin/pft/addressbook/appmanager/SessionHelper.java
  ru.vdovin.pft.addressbook.appmanager.SessionHelper
 ru/vdovin/pft/addressbook/model/ContactData.java
  ru.vdovin.pft.addressbook.model.ContactData
-ru/vdovin/pft/addressbook/tests/GroupDeletionTest.java
- ru.vdovin.pft.addressbook.tests.GroupDeletionTest
+ru/vdovin/pft/addressbook/model/GroupData.java
+ ru.vdovin.pft.addressbook.model.GroupData
 ru/vdovin/pft/addressbook/tests/ContactDeletionTest.java
  ru.vdovin.pft.addressbook.tests.ContactDeletionTest
 ru/vdovin/pft/addressbook/tests/GroupEditingTest.java
@@ -26,5 +26,5 @@ ru/vdovin/pft/addressbook/tests/ContactEditingTest.java
  ru.vdovin.pft.addressbook.tests.ContactEditingTest
 ru/vdovin/pft/addressbook/appmanager/GroupHelper.java
  ru.vdovin.pft.addressbook.appmanager.GroupHelper
-ru/vdovin/pft/addressbook/model/GroupData.java
- ru.vdovin.pft.addressbook.model.GroupData
+ru/vdovin/pft/addressbook/tests/GroupDeletionTest.java
+ ru.vdovin.pft.addressbook.tests.GroupDeletionTest
