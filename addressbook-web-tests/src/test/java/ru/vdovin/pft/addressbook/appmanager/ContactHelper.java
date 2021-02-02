@@ -22,31 +22,17 @@ public class ContactHelper extends HelperBase {
         clearAndType(By.name("lastname"), contactData.getLastname());
         clearAndType(By.name("nickname"), contactData.getNickname());
         clearAndType(By.name("company"), contactData.getCompany());
-        clearAndType(By.name("address"), contactData.getAddress());
-        clearAndType(By.name("home"), contactData.getHome());
-        clearAndType(By.name("mobile"), contactData.getMobilePhone());
-        clearAndType(By.name("work"), contactData.getWorkPhone());
-        clearAndType(By.name("email"), contactData.getEmail1());
-        clearAndType(By.name("email2"), contactData.getEmail2());
-        clearAndType(By.name("email3"), contactData.getEmail3());
-        clearAndType(By.name("homepage"), contactData.getHomepage());
-        click(By.name("bday"));
-        {
-            click(By.xpath("//option[. = '1']"));
-        }
-        click(By.name("bmonth"));
-        {
-            click(By.xpath("//option[. = 'January']"));
-        }
-        clearAndType(By.name("byear"), "2000");
-        {
-            click(By.xpath("//option[. = '1']"));
-        }
         if (creation) {
-            new Select(driver.findElement(By.name("new_group"))).selectByVisibleText("[none]");
+            new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
+    }
+
+    public void createContact(ContactData contact) {
+        initContactCreation();
+        fillContactForm(contact, true);
+        submitContactCreation();
     }
 
     public void confirmDeletion() {
@@ -57,12 +43,12 @@ public class ContactHelper extends HelperBase {
         click(By.cssSelector(".left:nth-child(8) > input"));
     }
 
-    public void selectContact(String name) {
-        click(By.name(name));
+    public void selectContact(String name, int index) {
+        driver.findElements(By.name(name)).get(index).click();
     }
 
-    public void editSelectedContact() {
-        click(By.cssSelector(".center:nth-child(8) img"));
+    public void editSelectedContact(String name, int index) {
+        driver.findElements(By.xpath(name)).get(index).click();
     }
 
     public void submitContactEditing() {
@@ -73,13 +59,11 @@ public class ContactHelper extends HelperBase {
         click(By.name("submit"));
     }
 
-    public void createContact(ContactData contact, boolean creation) {
-        initContactCreation();
-        fillContactForm(contact, true);
-        submitContactCreation();
-    }
-
     public boolean isThereAnyContact() {
         return isElementPresent(By.name("selected[]"));
+    }
+
+    public int getContactCount() {
+        return driver.findElements(By.xpath("//img[@alt='Edit']")).size();
     }
 }
