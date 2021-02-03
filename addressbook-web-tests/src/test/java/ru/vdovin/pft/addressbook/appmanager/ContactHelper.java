@@ -3,8 +3,12 @@ package ru.vdovin.pft.addressbook.appmanager;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import ru.vdovin.pft.addressbook.model.ContactData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactHelper extends HelperBase {
 
@@ -18,10 +22,10 @@ public class ContactHelper extends HelperBase {
 
     public void fillContactForm(ContactData contactData, boolean creation) {
         clearAndType(By.name("firstname"), contactData.getFirstname());
-        clearAndType(By.name("middlename"), contactData.getMiddlename());
         clearAndType(By.name("lastname"), contactData.getLastname());
-        clearAndType(By.name("nickname"), contactData.getNickname());
-        clearAndType(By.name("company"), contactData.getCompany());
+        clearAndType(By.name("address"), contactData.getAddress());
+        clearAndType(By.name("mobile"), contactData.getMobile());
+        clearAndType(By.name("email"), contactData.getEmail());
         if (creation) {
             new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
         } else {
@@ -47,8 +51,8 @@ public class ContactHelper extends HelperBase {
         driver.findElements(By.name(name)).get(index).click();
     }
 
-    public void editSelectedContact(String name, int index) {
-        driver.findElements(By.xpath(name)).get(index).click();
+    public void editSelectedContact(int index) {
+        driver.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
     }
 
     public void submitContactEditing() {
@@ -65,5 +69,22 @@ public class ContactHelper extends HelperBase {
 
     public int getContactCount() {
         return driver.findElements(By.xpath("//img[@alt='Edit']")).size();
+    }
+
+    public List<ContactData> getContactList() {
+        List<ContactData> contacts = new ArrayList<>();
+        List<WebElement> elements = driver.findElements(By.xpath("//tr[@name='entry']"));
+        for (WebElement element : elements) {
+            int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("id"));
+            String lastname = element.findElement(By.xpath("td[2]")).getText();
+            String firstname = element.findElement(By.xpath("td[3]")).getText();
+            String address = element.findElement(By.xpath("td[4]")).getText();
+            String email = element.findElement(By.xpath("td[5]")).getText();
+            String phone = element.findElement(By.xpath("td[6]")).getText();
+
+            ContactData contact = new ContactData(id, lastname, firstname, address, email, phone, null);
+            contacts.add(contact);
+        }
+        return contacts;
     }
 }
